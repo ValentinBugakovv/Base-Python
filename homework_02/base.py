@@ -1,4 +1,5 @@
 from abc import ABC
+from exceptions import LowFuelError
 
 
 class Vehicle(ABC):
@@ -13,4 +14,4 @@ class Vehicle(ABC):
             if self.fuel > 0:
                 self.started = True
             else:
-                raise Exception
+                raise LowFuelError
